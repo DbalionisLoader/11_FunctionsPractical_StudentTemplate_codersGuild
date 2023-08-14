@@ -3,7 +3,40 @@ console.log('I am Connected')
 /* let size = "small";
 let drink = "Cola"; */
 
-let drinkButton = document.querySelectorAll(".drinkButton");
+const inputNum1 = 20;
+const inputNum2 = 20;
+const operator ="multi";
+
+calculator = (number1, number2, operator) => {
+	let calcResult;
+	switch (operator) {
+    case "add":
+		calcResult = number1 + number2;
+        break;
+    case "minus":
+		calcResult = number1 - number2;
+        break;
+    case "multi":
+		calcResult = number1 * number2;
+        break;
+	case "div":
+		calcResult = number1 / number2;
+			break;
+	case "mod":
+		calcResult = number1 % number2;
+			break;
+						
+    default:
+		calcResult = "No maths here";
+}
+     let message = `Number ${number1} ${operator.toUpperCase()} number ${number2} equals ${calcResult}`;
+return message;
+}
+
+console.log(calculator(inputNum1,inputNum2,operator));
+
+
+/* let drinkButton = document.querySelectorAll(".drinkButton");
 console.log(drinkButton);
 drinkButton.forEach(button => {
 	
@@ -35,7 +68,7 @@ let drinkLabel;
 }
 	let message = `You have ordered a ${size} drink of ${drinkLabel}`;
 	return message;
-}
+} */
 
 //console.log(drinkOrder("Large","sss"));
 // ----- FIND PERCENTAGE OFF -----

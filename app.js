@@ -1,5 +1,58 @@
 console.log('I am Connected')
 
+/* let size = "small";
+let drink = "Cola"; */
+
+let drinkButton = document.querySelectorAll(".drinkButton");
+console.log(drinkButton);
+drinkButton.forEach(button => {
+	
+	button.addEventListener("click", function(event) {
+		console.log(`The event is ${event}`);
+		console.log(`The target is ${event.target}`);
+	let drinkValue = event.target.value;
+	console.log(drinkValue);
+	console.log(drinkOrder("Large",drinkValue));
+});
+
+	
+});
+
+drinkOrder = (size,buttonName) => {
+let drinkLabel;
+	switch (buttonName) {
+    case "Cola":
+       drinkLabel = "Cola";
+        break;
+    case "Lemonade":
+		drinkLabel = "Lemonade";
+        break;
+    case "Orangeade":
+		drinkLabel = "Orangeade";
+        break;
+    default:
+        drinkLabel = "pick something from the menu";
+}
+	let message = `You have ordered a ${size} drink of ${drinkLabel}`;
+	return message;
+}
+
+//console.log(drinkOrder("Large","sss"));
+// ----- FIND PERCENTAGE OFF -----
+/* const number = prompt("Enter number");
+const percentage = prompt("Enter percentage");
+
+function percentageCalculator(number,percentage) {
+	if( +number && +percentage) {
+		let percentOff = (percentage/100)*number;
+		return percentOff;
+	} else {
+	console.log("missing number");
+	}
+}
+
+console.log(percentageCalculator(number, percentage)); */
+
 // Demo - 1 - Basic Function
 /*
 // Declare - This does nothing
